@@ -1,0 +1,21 @@
+<%= form_with(model: @receipt, local: true) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :patient %><br>
+    <%= form.select :patient_id, options_for_select(@patients), {}, {required: 'true', autofocus: 'true', class: 'custom-select custom-select-lg mb-3'} %>
+
+  </div>
+
+  <div class="form-group">
+    <%= form.label :descricao_tratamento %><br>
+    <%= form.text_field :descricao_tratamento, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :valor %><br>
+    <%= form.text_field :valor, :class => 'form-control' %>
+  </div>
+
+  <%= form.submit 'Salvar Recibo', :class => 'btn btn-primary btn-sm' %>
+
+<% end %>

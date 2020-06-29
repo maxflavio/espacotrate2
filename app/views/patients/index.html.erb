@@ -1,0 +1,44 @@
+<%= render :partial => './div_top' %>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= render :partial => './div_left' %>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
+      <br />
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">CPF</th>
+          <th scope="col">Data Nascimento</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">Opções</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% @patients.each do |patient| %>
+          <tr>
+            <td><%=patient.nome %></td>
+            <td><%=patient.cpf %></td>
+            <td><%=patient.data_nascimento %></td>
+            <td><%=patient.telefone %></td>
+            <td>
+              <%= link_to 'Show', patient_path(patient) %> |
+              <%= link_to 'Edit', edit_patient_path(patient) %>
+            </td>
+          </tr>
+        <% end %>
+
+
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-primary btn-sm" onclick="location.href='/patients/new'">Adicionar Novo Paciente</button>
+
+    </main>
+  </div>
+</div>

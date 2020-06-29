@@ -1,0 +1,26 @@
+<%= form_with(model: @comment, local: true) do |form| %>
+
+
+  <div class="form-group">
+    <div>
+      <input type="text" readonly class="form-control-plaintext" value="<%=@patient.nome %>">
+    </div>
+  </div>
+
+  <div style="display: none">
+  <%= fields_for :patient, @comment.patient do |patient_fields| %>
+    Nome: <%= patient_fields.text_field :nome %>
+    cpf: <%= patient_fields.text_field :cpf %>
+  <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :conteudo %><br>
+    <%= form.text_area :conteudo, :class => 'form-control' , rows: "8" %>
+  </div>
+
+
+
+  <%= form.submit 'Salvar Evolução', :class => 'btn btn-primary btn-sm' %>
+
+<% end %>

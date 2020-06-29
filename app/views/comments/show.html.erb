@@ -1,0 +1,35 @@
+<%= render :partial => './div_top' %>
+
+<div class="container-fluid">
+  <div class="row">
+    <%= render :partial => './div_left' %>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+
+      <br />
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Data Comentário</th>
+          <th scope="col">Conteúdo</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% @comments.each do |comment| %>
+          <tr>
+            <td><%=comment.data_comentario %></td>
+            <td><%=comment.conteudo %></td>
+          </tr>
+        <% end %>
+
+
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-primary btn-sm" onclick="location.href='/patients/new'">Adicionar Novo Paciente</button>
+
+    </main>
+  </div>
+</div>

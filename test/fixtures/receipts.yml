@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valor: 
+  patient: one
+  descricao_tratamento: MyText
+
+two:
+  valor: 
+  patient: two
+  descricao_tratamento: MyText
