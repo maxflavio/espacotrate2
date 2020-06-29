@@ -1,8 +1,0 @@
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: projeto_espacotrate2
-  pool: 5
-  username: postgres
-  password:
-  host: 67.205.136.198
