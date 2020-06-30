@@ -57,10 +57,9 @@ gem 'pg'
 gem 'image_processing'
 gem 'mini_magick'
 
-# Gem para gerar os pdfs
-gem 'prawn-rails'
-# Gem para gerar os gráficos
-gem 'gruff'
-
+# Gemfile
+# rails-generate-pdf/Gemfile
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

@@ -1,43 +1,59 @@
-<%= render :partial => './div_top' %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<div class="container-fluid">
-  <div class="row">
-    <%= render :partial => './div_left' %>
+<div class="container" >
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<div>
+  <img src="<%= asset_path( 'logo_espaco_trate.png' ) %>" />
+</div>
 
-      <br />
-      <br />
-
-      <form>
-        <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Nome</label>
-          <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" value="<%=@receipt.patient.nome %>">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Valor</label>
-          <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" value="<%=@receipt.valor %>">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Descrição Tratamento</label>
-          <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" value="<%=@receipt.descricao_tratamento %>">
-          </div>
-        </div>
-
-        <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
-      </form>
+<div style="text-align: center">
+  <strong>RECIBO</strong>
+</div>
 
+<br />
+<br />
+<br />
+<br />
 
+<div>
+  <p>Através desse documento, Eu, <strong>Ludmilla Pereira Mota</strong>, inscrita no <strong>CPF 734.834.861-00</strong>, declaro que
+    recebi do Sr.(a) <strong><%=@receipt.patient.nome %></strong>, CPF <strong><%=@receipt.patient.cpf %>,</strong> a quantia de <strong>R$
+    <%=@receipt.valor %></strong>, correspondente à seguinte tratamento: <strong><%=@receipt.descricao_tratamento %></strong>.</p>
+</div>
 
-    </main>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
+<div>
+  <hr style="border-color: black">
+</div>
+<div style="text-align: center">
+  Ludmilla Pereira Mota
+</div>
 
-  </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div style="text-align: right">Goiania, <%= Time.now().strftime("%d/%m/%Y") %></div>
 </div>
